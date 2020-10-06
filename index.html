@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0dde8b7d98.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Slider</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <div class="backcolor colors">   
+        <div class="container">
+            <iframe width="460" height="215"  src="https://www.youtube.com/embed/__i8knHtufI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="voting">
+                <form method="GET"></form>
+                    <a class="like"><i class="fas fa-fire"></i>  
+                        <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+                    </a>
+                    <a class="dislike"><i class="fas fa-bomb"></i> 
+                        <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+                    </a>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <iframe width="460" height="215"  src="https://www.youtube.com/embed/__i8knHtufI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="voting">
+                <form method="GET"></form>
+                    <a class="like"><i class="fas fa-fire"></i>  
+                        <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+                    </a>
+                    <a class="dislike"><i class="fas fa-bomb"></i> 
+                        <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+                    </a>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <iframe width="460" height="215"  src="https://www.youtube.com/embed/__i8knHtufI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="voting">
+                <form method="GET"></form>
+                    <a class="like"><i class="fas fa-fire"></i>  
+                        <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+                    </a>
+                    <a class="dislike"><i class="fas fa-bomb"></i> 
+                        <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+                    </a>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <iframe width="460" height="215"  src="https://www.youtube.com/embed/__i8knHtufI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="voting">
+                <form method="GET"></form>
+                    <a class="like"><i class="fas fa-fire"></i>  
+                        <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+                    </a>
+                    <a class="dislike"><i class="fas fa-bomb"></i> 
+                        <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+                    </a>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <iframe width="460" height="215"  src="https://www.youtube.com/embed/__i8knHtufI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="voting">
+                <form method="GET"></form>
+                    <a class="like"><i class="fas fa-fire"></i>  
+                        <input class="qty1" name="qty1" readonly="readonly" type="text" value="0" />
+                    </a>
+                    <a class="dislike"><i class="fas fa-bomb"></i> 
+                        <input class="qty2"  name="qty2" readonly="readonly" type="text" value="0" />
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        let f = true
+            $(function () {
+
+                    $(".like").click(function () {
+                        if(f){
+                        var input = $(this).find('.qty1');
+                        input.val(parseInt(input.val())+ 1);
+                        input.css("color","green");
+                        f=false
+                        }
+                    });
+
+                    $(".dislike").click(function () {
+                        if(f){
+                        var input = $(this).find('.qty2');
+                        input.val(input.val() - 1);
+                        input.css("color","red");
+                        f=false
+                        }
+                    });
+                });
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }       
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    
+    
+</body>
+</html>
